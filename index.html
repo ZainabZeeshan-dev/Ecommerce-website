@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Banner with Animation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Adjusted for better responsiveness */
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center content horizontally */
+            background-color: #333; /* Background color if the image doesn't load */
+        }
+
+        .banner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .banner-container:hover .banner-image {
+            transform: scale(1.1);
+        }
+
+        .banner-text {
+            position: absolute;
+            text-align: left;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+            color: #fff;
+            border-radius: 10px;
+            max-width: 90%; /* Ensure text doesn't overflow on small screens */
+            width: 60%; /* Adjust as needed */
+            left: 20px; /* Added margin from the left */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust position */
+        }
+
+        .banner-text h1 {
+            margin: 0;
+            font-size: 2em; /* Responsive font size */
+        }
+
+        .banner-text p {
+            font-size: 1em; /* Responsive font size */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .banner-text h1 {
+                font-size: 1.5em; /* Smaller font size for smaller screens */
+            }
+
+            .banner-text p {
+                font-size: 0.9em; /* Smaller font size for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-text h1 {
+                font-size: 1.2em; /* Even smaller font size for very small screens */
+            }
+
+            .banner-text p {
+                font-size: 0.8em; /* Even smaller font size for very small screens */
+            }
+
+            .banner-text {
+                width: 80%; /* Wider text area for very small screens */
+                padding: 10px; /* Less padding on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="banner-container">
+        <img src="troly1.jpg" alt="Banner Image" class="banner-image">
+        <div class="banner-text">
+            <h1>Welcome to Our Website</h1>
+            <p>Discover our amazing products and services!</p>
+        </div>
+    </div>
+</body>
+</html> -->
